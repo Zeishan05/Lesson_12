@@ -1,0 +1,229 @@
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+	padding: 50px;
+}
+body{
+	background-color: #333;
+	color: #fff;
+	font-size: 25px;
+}
+.block__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+}
+.block__container--margin {
+	margin-bottom: 20px;
+}
+.block__background {
+	width: 200px;
+	height: 200px;
+	background-color: #7A956B;
+	text-align: center;
+	padding-top: 20px;
+}
+.block__container:active .block__background {
+	transform: translate(200px,200px);
+}
+.block-2__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+}
+.block-2__background {
+	width: 200px;
+	height: 200px;
+	background-color: #7A956B;
+	transform: scale(0.8);
+}
+.block-3__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+}
+.block-3__background {
+	width: 200px;
+	height: 200px;
+	background-color: #95946b;
+	transform: rotate(-20deg);
+}
+.block-4__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+}
+.block-4__background {
+	width: 200px;
+	height: 200px;
+	background-color: #957a6b;
+	transform: skew(20deg,10deg);
+	opacity: 0.8;
+}
+.block-5__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+}
+.block-5__background {
+	width: 200px;
+	height: 200px;
+	background-color: #706b95;
+	opacity: 0.6;
+	transform: rotate(20deg);
+	transform-origin: 0 0;
+}
+.block-6__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+	perspective: 400px;
+	perspective-origin: center;
+}
+.block-6__background {
+	width: 200px;
+	height: 200px;
+	background-color: #956b83;
+	transform: rotateX(45deg);
+}
+.block-7__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+	perspective: 300px;
+	transform-style: preserve-3d;
+}
+.block-7__background {
+	width: 200px;
+	height: 200px;
+	background-color: #706b95;
+	opacity: 0.6;
+	transform: rotateY(180deg);
+	transition: all 0.9s ease 0s;
+	background-image: url(../img/StarStrok.jpg);
+}
+.block-7__container:hover .block-7__background {
+	transform: rotateY(0deg);
+	background-image: url(../img/Vector.jpg);
+}
+.block-8__container {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(102, 102, 102, 0.8);
+}
+.block-8__background {
+	width: 200px;
+	height: 200px;
+	background-color: #706b95;
+}
+.block-8__container:hover .block-8__background {
+	transform: rotateY(180deg);
+	transition: all 1.5s ease 0s;
+	backface-visibility: hidden;
+}
+.cards__container {
+	background-color: rgb(238, 222, 222);
+	width: 400px;
+	height: 600px;
+	border-radius: 50px;
+	border: 2px solid red ;
+	position: relative;
+}
+.card {
+}
+.card__number::after {
+	content: "7";
+	position: absolute;
+	color: red;
+	font-size: 70px;
+	top: 10px;
+	left: 20px;
+}
+.card__number::before {
+	content: "7";
+	position: absolute;
+	color: red;
+	font-size: 70px;
+	bottom: 10px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+.card__heart {
+	width: 100px;
+	height: 80px;
+	position: relative;
+}
+.card__heart::before,
+.card__heart::after  {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 80px;
+	left: 100px;
+	background-color: red;
+	border-radius: 100px 100px 0 0;
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+}
+.card__heart::after {
+	left: 50px;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
+}
+.cards {
+	perspective: 2000px;
+	transform-style: preserve-3d;
+}
+.cards__container:active .card__heart {
+	visibility: hidden;
+}
+.cards__container:active .card__number {
+	visibility: hidden;
+}
+.card__heart--1 {
+	position: absolute;
+	top: 40px;
+}
+.card__heart--2 {
+	position: absolute;
+	top: 40px;
+	right: 100px;
+}
+.card__heart--3 {
+	position: absolute;
+	top: 150px;
+	left: 100px;
+}
+.card__heart--4 {
+	position: absolute;
+	top: 250px;
+}
+.card__heart--5 {
+	position: absolute;
+	top: 250px;
+	right: 100px;
+}
+.card__heart--6 {
+	position: absolute;
+	bottom: 40px;
+	left: 100px;
+	transform: rotate(180deg);
+}
+.card__heart--7 {
+	position: absolute;
+	bottom: 40px;
+	right: 0px;
+	transform: rotate(180deg);
+}
+.card {
+	transform: rotateY(0deg);
+	transition: all 0.5s ease 0s;
+}
+.cards:active .card {
+	transform: rotateY(180deg);
+	transition: all 0.5s ease 0s;
+	background-image: url(../img/001.jpg);
+	background-repeat: no-repeat;
+	background-size: 400px 600px;
+}
